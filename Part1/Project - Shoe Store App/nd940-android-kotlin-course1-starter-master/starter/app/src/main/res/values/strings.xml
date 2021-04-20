@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="emailLabelText">Email address:</string>
+    <string name="passwordLabelText">Password:</string>
+    <string name="emailHint">user@email.com</string>
+    <string name="passwordHint">********</string>
+    <string name="login">Login</string>
+    <string name="signUp">Don\'t have an account?<font color='#00EAFF'> Sign up</font> here</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="appNameLabel">Shoe Store</string>
+    <string name="descriptionLabel">Welcome at Shoe Store.\n Shoes for everyone.</string>
+    <string name="Enter">Enter</string>
+    <string name="get_started">Get Started</string>
+    <string name="getStartedLabel">Huge amount of brands in our store!</string>
+    <string name="getStartedDescription">Our store offers lot of worldwide known brands and offers premium services, like free shipping, 24/7 support line, and many more...</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="company">Company</string>
+    <string name="shoe_size">Shoe size</string>
+    <string name="shoeDescription">Description</string>
+    <string name="shoe_name">Shoe name</string>
+    <string name="empty">" "</string>
+    <string name="welcome">Welcome</string>
+    <string name="why_us">Why us?</string>
+    <string name="our_shoes">Our shoes</string>
+    <string name="create_product">Create product</string>
+</resources>

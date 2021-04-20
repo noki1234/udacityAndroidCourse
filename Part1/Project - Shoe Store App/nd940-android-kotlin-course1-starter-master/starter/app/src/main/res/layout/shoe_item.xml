@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="shoeItem"
+            type="com.udacity.shoestore.models.Shoe"/>
+    </data>
+
+
+    <!--Used LinearLayout because its simple layout, suitable for displaying shoe information (line by line)
+    = This layout is used for displaying shoe details in ShoeList screen-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:background="#FAF3DE"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/amiko"
+        android:text="@{shoeItem.name}"
+        android:textAlignment="center"
+        android:textColor="@color/happyOrange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="name" />
+
+    <TextView
+        android:id="@+id/itemCompanyLabel"
+        style="@style/TitleStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/company"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemName" />
+
+    <TextView
+        android:id="@+id/itemCompany"
+        style="@style/TextStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{shoeItem.company}"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCompanyLabel"
+        tools:text="company" />
+
+    <TextView
+        android:id="@+id/itemSizeLabel"
+        style="@style/TitleStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shoe_size"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemCompany" />
+
+    <TextView
+        android:id="@+id/itemSize"
+        style="@style/TextStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{Double.toString(shoeItem.size)}"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/itemSizeLabel"
+        app:layout_constraintTop_toBottomOf="@+id/itemSizeLabel"
+        tools:text="size" />
+
+    <TextView
+        android:id="@+id/itemDescriptionLabel"
+        style="@style/TitleStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shoeDescription"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemSize" />
+
+    <TextView
+        android:id="@+id/itemDescription"
+        style="@style/TextStyleShoeItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{shoeItem.description}"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemDescriptionLabel"
+        tools:text="description" />
+
+</LinearLayout>
+</layout>
